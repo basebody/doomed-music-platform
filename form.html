@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Upload Form</title>
+    <link rel="stylesheet" href="styles/form-styles.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Upload</h2>
+        <form>
+            <div class="form-group">
+                <div class="text">Song Name</div>
+                <input type="text" name="songName" required>
+            </div>
+            <div class="form-group">
+                <div class="text">Song Author</div>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <div class="text">Genre</div>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <div class="text">File</div>
+                <label for="songFile">Choose a file</label>
+                <input type="file" id="songFile" accept=".mp3, .wav" onchange="document.querySelector('.form-group:nth-child(4) > label').textContent = this.files[0].name">
+            </div>
+            <div class="form-group">
+                <div class="text">Disk</div>
+                <label for="songDisk">Choose a file</label>
+                <input type="file" id="songDisk" accept="image/*" onchange="document.querySelector('.form-group:nth-child(5) > label').textContent = this.files[0].name">
+            </div>
+            <div class="form-group">
+                <div class="text">Cover</div>
+                <label for="songCover">Choose a file</label>
+                <input type="file" id="songCover" accept="image/*" onchange="document.querySelector('.form-group:nth-child(6) > label').textContent = this.files[0].name" required>
+            </div>
+            <button type="submit" class="submit-btn">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
