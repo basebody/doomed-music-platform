@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
@@ -34,7 +35,6 @@ header .container {
 
 header * {
     color: #fff;
-    font-family: 'Arial', sans-serif;
     font-weight: bold;
 }
 
@@ -45,28 +45,34 @@ header img {
     margin-left: 17px;
 }
 
+.song-item {
+    display: flex;
+    width: 272px;
+    background: #a0a0a0;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
 .song-item .front-img {
-    width: 80px;
-    height: 80px;
-    border: solid black 3px;
+    width: 130px;
+    height: 130px;
+    border: solid 3px #000;
 }
 
 .song-item .title {
-    display: flex;
-    width: 105px;
-    height: 86px;
+    width: 136px;
+    height: 136px;
     margin-left: 3px;
-    justify-content: center;
-}
-
-.song-item {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .song-item .title div {
     display: flex;
-    color: black;
-    font-size: 15px;
+    font-weight: bold;
+    color: #e6e6e6;
+    font-size: large;
     display: flex;
     flex-direction: column;
     align-self: flex-end;
@@ -81,12 +87,11 @@ header img {
 }
 
 .songs-items {
-    background-color: lightgray;
-    width: 200px;
-    padding: 0.5%;
-    border-right: solid rgb(54, 54, 54) 5px;
-    overflow-y: scroll;
-    border: solid black 3px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(auto-fill, 140px);
+    gap: 20px;
     margin: 5px;
 }
 
@@ -120,33 +125,6 @@ main {
 }
 
 @media (min-width: 700px) and (min-height: 500px) {
-    .song-item .front-img {
-        width: 130px;
-        height: 130px;
-    }
-
-    .songs-items {
-        width: 290px;
-    }
-    .song-item .title {
-        width: 136px;
-        height: 136px;
-        margin-left: 3px;
-    }
-
-    .songs-items > div:nth-child(15) > a > .title {
-        margin-bottom: 5px;
-    }
-
-    .song-item { 
-        width: 272px;
-    }
-
-    .song-item .title div {
-        color: black;
-        font-size: large;
-    }
-
     @keyframes pulse {
         0% {
             /* height: 55px; */
